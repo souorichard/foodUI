@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./config-scss/rem-calc.scss";
+@import "./config-scss/variables.scss";
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
+
+html,
+body {
+  height: 120vh;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  scroll-behavior: smooth;
+}
+
+img {
+  border-radius: 20px;
+}
+
+section {
+  padding: 100px;
+  background-color: var(--black);
+
+  .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .titleText {
+    font-size: rem-calc(32);
+    font-weight: 300;
+    color: var(--fontWhite);
+
+    span {
+      font-size: rem-calc(24);
+      font-weight: 700;
+      color: var(--pink);
+    }
+  }
+
+  .content {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .box {
+      border-radius: 20px;
+    }
+  }
+
+  .btn {
+    font-size: rem-calc(16);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--fontWhite);
+    padding: 5px 30px;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: var(--pink);
+    letter-spacing: 2px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+
+  .btn:hover {
+    letter-spacing: 6px;
+  }
+}
+
+p {
+  font-weight: 300;
+  color: var(--fontWhite);
+}
